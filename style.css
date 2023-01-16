@@ -1,0 +1,276 @@
+
+  body, html {
+    padding: 0;
+    margin: 0;
+    /* width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    user-select: none; */
+  }
+  
+  .header {
+    background-color:#333333;
+    /* margin-top: 42px; */
+  }
+  
+  .container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  /* .home {
+    background: url(images/img2.jpeg);
+    background-size:cover;
+    background-position:inherit;
+    background-repeat:no-repeat;
+    height: 617px;
+  } */
+  
+  .nav {
+    margin: 0;
+    margin-left: 581px;
+    padding-bottom: 21px;
+    padding-top: 10px;
+    padding-left: 6px;
+  }
+  
+  .nav li {
+    display:inline;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform:uppercase;
+    margin-left:10px;
+    margin-right:10px;
+  }
+  
+  .main {
+    position: relative;
+    top: 180px;
+    text-align: center;
+  }
+  
+  .main h1 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    margin-top: 0;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+  }
+  
+  .btn-main {
+    background-color: #333;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    padding: 16px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .btn-default {
+    color:#333;
+    border:1px solid #333333;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;  
+    display: inline-block;
+    margin-bottom: 20px; 
+    padding-right:50px;
+    padding-left:50px;
+  }
+  
+  .clearfix {
+    clear: both;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1px 0;
+    margin-top: 774px;
+  }
+  
+  .footer p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+  
+  @media (max-width: 500px) {
+    .main h1 {
+      font-size: 50px;
+      padding: 0 40px;
+    }
+  
+    .supporting .col {
+      width: 100%;
+    }
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+  
+  .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  
+    
+    
+    .sr-only {
+      position: absolute;
+      pointer-events: none;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      color: transparent;
+    }
+    
+    input {
+      position: absolute;  
+      opacity: 0;
+      margin-top: 95vh;
+      cursor: pointer;
+    }
+    
+    /* label {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: solid 2px white;
+      border-radius: 999px;
+      background-color: transparent;
+      margin: 95vh 6px 0 6px;
+      z-index: 2;
+      cursor: pointer;
+      transition-duration: .4s;
+      box-shadow: 0 0 20px 0 #000;
+    } */
+    
+    input:checked + label{
+      background-color: white;
+    }
+    
+    input + label::after{
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' style='fill:white'%3E%3Cpath d='M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center 55%;
+      background-size: 80px 80px;
+      line-height: 100vh;
+      transition: background-size 200ms;
+      position: absolute;
+      color: white;
+      height: calc(95vh - 12px);
+      width: 80px;
+      top: 204px;
+      left: 0;
+      z-index: 20;
+    }
+    
+    input + label:hover::after {
+      background-size: 90px 90px;
+    }
+    
+    input:checked + label::after {
+      background-image: none;
+      /* width: 100vw; */
+      left: 0;
+      z-index: 10;
+    }
+    
+    input:checked + label + .slide ~ input + label::after {
+      display: none;
+    }
+    
+    input:checked + label + .slide + input + label::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' fill='white'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z' /%3E%3C/svg%3E");
+      display: block;
+      width: 80px;
+      right: 0;
+      left: auto;
+    }
+    
+    input:focus + label{
+      box-shadow: 0 0 0 2px teal, 0 0 18px white;
+    }
+    
+    .slide {
+      position: fixed;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transform: translateX(-100%);
+      transition-duration: .4s;
+      opacity: 1;
+    }
+    
+    input:checked ~ .slide {
+      transform: translateX(100%);
+    }
+    
+    input:checked + label + .slide {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    .bg1{
+      background: url(images/img2.jpeg);
+      background-size:cover;
+    background-position:inherit;
+    background-repeat:no-repeat;
+    height: 617px;
+      }
+    .bg2{
+      background: url(images/img1.jpeg);  
+      background-size:cover;
+    background-position:inherit;
+    background-repeat:no-repeat;
+    height: 617px;
+    }
+    .bg3{
+      background: url(images/img3.jpeg);  
+      background-size:cover;
+    background-position:inherit;
+    background-repeat:no-repeat;
+    height: 617px;
+    }
